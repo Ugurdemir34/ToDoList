@@ -14,5 +14,6 @@ namespace ToDoList.Entities.Concrete
 
         //Navigation Property
         public User User { get; set; }
+        public List<Part> Parts { get; set; }
     }
 }

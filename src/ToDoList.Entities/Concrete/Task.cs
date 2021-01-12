@@ -19,5 +19,7 @@ namespace ToDoList.Entities.Concrete
         public Comment Comment { get; set; }
         public Task ParenTask { get; set; }
         public User User { get; set; }
+        public Part Part { get; set; }
+       
     }
 }
