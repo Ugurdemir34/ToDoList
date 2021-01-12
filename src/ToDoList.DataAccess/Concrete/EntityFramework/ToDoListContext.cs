@@ -20,6 +20,7 @@ namespace ToDoList.DataAccess.Concrete.EntityFramework
         public DbSet<OperationClaim> OperationClaims { get; set; }
         public DbSet<UserRole> UserRoles { get; set; }
         public DbSet<UserOperationClaim> UserOperationClaims { get; set; }    
+        public DbSet<Part> Parts { get; set; }    
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<UserOperationClaim>()
