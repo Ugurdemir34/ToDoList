@@ -27,7 +27,7 @@ namespace ToDoList.DataAccess.Concrete.EntityFramework
                 .HasKey(uoc => new { uoc.OperationClaimId,uoc.UserId});
             modelBuilder.Entity<UserOperationClaim>()
                 .HasOne(uoc => uoc.User)
-                .WithMany(u => u.userOperationClaims)
+                .WithMany(u => u.UserOperationClaims)
                 .HasForeignKey(u => u.UserId);
             modelBuilder.Entity<UserOperationClaim>()
                 .HasOne(uoc => uoc.OperationClaim)
