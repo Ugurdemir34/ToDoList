@@ -10,7 +10,7 @@ namespace ToDoList.Entities.Concrete
         public Guid OperationClaimId { get; set; }
         
         //Navigation Property
-        public virtual User User { get; set; }
-        public virtual OperationClaim OperationClaim { get; set; }
+        public User User { get; set; }
+        public OperationClaim OperationClaim { get; set; }
     }
 }
