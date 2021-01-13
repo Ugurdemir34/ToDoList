@@ -17,7 +17,7 @@ namespace ToDoList.Entities.Concrete
         public bool EmailConfirmed { get; set; }
         public bool IsDeleted { get; set; }
 
-        public List<UserOperationClaim> userOperationClaims { get; set; }
+        public List<UserOperationClaim> UserOperationClaims { get; set; }
         public List<UserRole> UserRoles { get; set; }
     }
 }
