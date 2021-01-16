@@ -6,6 +6,7 @@ using ToDoList.Business.Constants;
 using ToDoList.Core.Utilities.Results;
 using ToDoList.DataAccess.Abstract;
 using ToDoList.Entities.Concrete;
+using ToDoList.Entities.Dtos;
 
 namespace ToDoList.Business.Concrete
 {
@@ -34,18 +35,17 @@ namespace ToDoList.Business.Concrete
             return new SuccessResult(Messages.PartDeleted);
         }
 
-        public IDataResult<List<Part>> GetAll()
+        public IDataResult<List<PartProjectDto>> GetAll()
         {
             try
             {
-                var model = _partDal.GetList();
-                
-                return new SuccessDataResult<List<Part>>(model, Messages.PartList);
+                var model = _partDal.GetAllParts();              
+                return new SuccessDataResult<List<PartProjectDto>>(model, Messages.PartList);
             }
             catch (Exception ex)
             {
 
-                return new ErrorDataResult<List<Part>>(ex.Message);
+                return new ErrorDataResult<List<PartProjectDto>>(ex.Message);
             }
         }
 
@@ -57,11 +57,7 @@ namespace ToDoList.Business.Concrete
                 return new SuccessDataResult<Part>(Messages.PartGet);
             }
             catch (Exception ex)
-            {
-                /*  if (model == null)
-                 {
-                     return new ErrorDataResult<Part>(Messages.PartGetError);
-                 }*/
+            {               
                 return new ErrorDataResult<Part>(ex.Message);
             }
         }
@@ -75,7 +71,6 @@ namespace ToDoList.Business.Concrete
             }
             catch (Exception ex)
             {
-
                 return new ErrorDataResult<Part>(ex.Message);
             }
         }
