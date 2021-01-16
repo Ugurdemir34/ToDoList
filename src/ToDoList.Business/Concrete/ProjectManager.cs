@@ -43,6 +43,10 @@ namespace ToDoList.Business.Concrete
         public IDataResult<Project> GetProject(Guid projectId)
         {
             var model = _projectDal.Get(i=>i.Id==projectId);
+            if(model == null)
+            {
+                return new ErrorDataResult<Project>(Messages.ProjectGetError);
+            }
             return new SuccessDataResult<Project>(model, Messages.ProjectGet);
         }
 
