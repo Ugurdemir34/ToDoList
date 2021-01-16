@@ -18,6 +18,7 @@ namespace ToDoList.Business.Constants
         public static string ProjectAddingError = "Proje Eklenemedi !";
         public static string ProjectDeletingError = "Proje Silinemedi !";
         public static string ProjectUpdatingError = "Proje Güncellenemedi !";
+        public static string ProjectGetError = "Proje Getirilemedi !";
         /* END OF Project Error Messages */
 
         /* Part Success Messages */
