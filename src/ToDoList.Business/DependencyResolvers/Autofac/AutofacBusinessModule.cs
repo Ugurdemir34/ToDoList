@@ -15,6 +15,9 @@ namespace ToDoList.Business.DependencyResolvers.Autofac
         {
             builder.RegisterType<ProjectManager>().As<IProjectService>();
             builder.RegisterType<EfProjectDal>().As<IProjectDal>();
+            
+            builder.RegisterType<PartManager>().As<IPartService>();
+            builder.RegisterType<EfPartDal>().As<IPartDal>();
         }
     }
 }
