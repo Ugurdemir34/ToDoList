@@ -35,6 +35,7 @@ namespace ToDoList.Business.Constants
         public static string PartAddingError = "Bölüm Eklenemedi !";
         public static string PartDeletingError = "Bölüm Silinemedi !";
         public static string PartUpdatingError = "Bölüm Güncellenemedi !";
+        public static string PartGetByProject = "Bu Proje Bilgilerine Ait Bir Bölüm Bulunamadı !";
         /* END OF Part Error Messages */
 
 
