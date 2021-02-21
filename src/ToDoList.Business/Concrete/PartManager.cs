@@ -66,8 +66,10 @@ namespace ToDoList.Business.Concrete
             try
             {
                 var model = _partDal.Get(i=>i.Project.Id == projectId);
-
-                return new SuccessDataResult<Part>(model, Messages.PartGet);
+                if (model != null)
+                    return new SuccessDataResult<Part>(model, Messages.PartGet);
+                else
+                    return new ErrorDataResult<Part>(Messages.PartGetByProject);
             }
             catch (Exception ex)
             {
